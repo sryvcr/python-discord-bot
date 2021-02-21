@@ -73,7 +73,7 @@ async def pokedex(ctx, *, search_by: str or int):
     embed.add_field(name="Weight:", value=f"{pokemon_res['weight']}")
     embed.add_field(name="Base experience:", value=f"{pokemon_res['base_experience']}")
     embed.add_field(name="Capture rate:", value=f"{pokemon_species_res['capture_rate']}")
-    embed.add_field(name="Habitat:", value=f"{pokemon_species_res['habitat']['name']}")
+    embed.add_field(name="Habitat:", value=f"{'undefined' if pokemon_species_res['habitat'] == None else pokemon_species_res['habitat']['name']}")
     embed.set_thumbnail(url=f"{pokemon_res['sprites']['front_default']}")
     await ctx.send(embed=embed)
 
