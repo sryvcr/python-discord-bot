@@ -20,8 +20,13 @@ async def ping(ctx):
 
 
 @bot.command()
-async def sum(ctx, numOne: int, numTwo: int):
-    await ctx.send(f"{numOne} + {numTwo} = {numOne + numTwo}")
+async def sum(ctx, *args):
+    sum_digits: str = ""
+    sum_result = 0
+    for num in args:
+        sum_digits += f"{num}" if sum_digits == "" else f" + {num}"
+        sum_result += int(num)
+    await ctx.send(f"{sum_digits} = {sum_result}")
 
 
 @bot.command()

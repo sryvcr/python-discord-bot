@@ -38,8 +38,8 @@ This bot contains 5 commands that you can type in discord:
     - `>stats`  
     returns a response with the discord server stats.
 3. `>sum`  
-    - `>sum 3 4`  
-    returns a response with the sum between two numbers.
+    - `>sum 10 9 56`  
+    returns a response with the sum between n numbers.
 4. `>youtube query`
     - `>youtube python`  
     returns the 10 principal videos from youtube according to the query, in this case 10 python videos.
